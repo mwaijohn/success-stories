@@ -1,5 +1,4 @@
 window.onload = (event) => {
-    console.log("window loaded")
 
     fetch("story.json")
     .then(response =>{
@@ -8,13 +7,22 @@ window.onload = (event) => {
     })
     .then(data =>{
         console.log(data)
-        let output = "<ul>"
+        let output = ""
         data.forEach(element => {
-            output += `<li>${element.storyLink}</li>`
+            output += 
+        `<div class="card-item">
+            <h2 class="title"><a href="${element.storyLink}">${element.storyTitle}</a></h2>
+            <p class="name">${element.name}</p>
+            <div class="links">
+                <a href="${element.storyTitle}">Twitter</a>
+                <a href="${element.storyTitle}">Linkedn</a>
+                <a href="${element.storyTitle}">Facebook</a>
+            </div>
+        </div>`
         });
-
-        output += "</ul>"
-
         document.getElementById("container").innerHTML = output
+    })
+    .catch(err => {
+        console.log("error")
     })
 }

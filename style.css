@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1,h2{
+    margin:0;
+}
+
+a{
+    text-decoration: none;
+}
+.header{
+    height: 60px;
+    background-color: black;
+    color: white;
+}
+.header > h1{
+    padding: 10px;
+    font-size: 30px;
+}
+
+#container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    padding-right: 20px;
+    padding-left: 50px;
+}
+.card-item{
+    padding: 10px;
+    box-shadow: aliceblue;
+    border-radius: 6;
+    border: 1px solid gainsboro;
+    width: 250px;
+    border-radius: 5px;
+    margin: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
