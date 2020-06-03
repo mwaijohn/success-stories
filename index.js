@@ -10,13 +10,13 @@ window.onload = (event) => {
         let output = ""
         data.forEach(element => {
             output += 
-        `<div class="card-item">
-            <h2 class="title"><a href="${element.storyLink}">${element.storyTitle}</a></h2>
+        `<div class="card mb-3 card-item">
+            <h5 class="title"><a href="${element.storyLink}">${element.storyTitle}</a></h5>
             <p class="name">${element.name}</p>
             <div class="links">
-                <a href="${element.storyTitle}">Twitter</a>
-                <a href="${element.storyTitle}">Linkedn</a>
-                <a href="${element.storyTitle}">Facebook</a>
+                <a href="${element.twitterLink}">Twitter</a>
+                <a href="${element.linkdnLink}">Linkedn</a>
+                <a href="${element.facebookLink}">Facebook</a>
             </div>
         </div>`
         });
